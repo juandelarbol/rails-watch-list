@@ -8,9 +8,18 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <div class="navbar">
+      <p class="title-nav">
+        <%= link_to ".movie ideal",  lists_path, class:"link-to"%>
+      </p>
+    </div>
     <%= yield %>
   </body>
 </html>

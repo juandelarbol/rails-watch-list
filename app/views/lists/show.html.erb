@@ -1,0 +1,29 @@
+<div class="container-movies">
+  <h1 class="funny-title big"><%= @list.name %></h1>
+  <h2 class="funny-title medium">This list has <%= @list.movies.count %> movies in it</h2>
+
+  <h2 class="funny-title medium">All bookmarks</h2>
+  <div class="container-movies movies">
+        <div class="card-movie">
+          <h3 class="funny-title small">Add a bookmark</h3>
+          <p class="card-text text-muted">Find a movie you like</p>
+            <%= simple_form_for([@list, @bookmark]) do |f| %>
+            <%= f.association :movie, label: "Select a movie" %>
+            <%= f.input :comment, label: "Comment your bookmark" %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+    <% @selected_bookmarks.each do |bookmark| %>
+      <div class="card-movie">
+          <img alt="poster" src="<%= bookmark.movie.poster_url %>" class="movie-img" >
+          <p><i class="fa-regular fa-circle-xmark absolute"></i></p>
+          <h3 class="h5 card-title"><%= bookmark.movie.title %></h3>
+          <p class="card-text text-muted"><%= bookmark.comment %></p>
+          <%= link_to <p><i class="fa-regular fa-circle-xmark absolute"></i></p>, bookmark_path(bookmark),
+              data: { turbo_method: :delete, 
+              turbo_confirm: "Are you sure?" } %>
+          </div>
+
+    <% end %>
+   </div>
+</div>

@@ -1,0 +1,23 @@
+.container-movies {
+  margin: 16px;
+  .movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; /* Espacement entre les éléments */
+  padding: 16px;}
+}
+
+
+.card-movie {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  font-family: Oswald;
+}
+
+.movie-img {
+  width: 100%;
+  object-fit: cover;
+}

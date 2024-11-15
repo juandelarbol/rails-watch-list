@@ -10,3 +10,31 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 80px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.title-nav {
+  font-family: 'oswald';
+  font-size: 50px;
+  a {
+    color: $title-cray;
+    text-decoration: none;
+  }
+
+  a :hover {
+    color: $title-cray-hover
+  }
+}
+
+.link-to {
+  text-decoration: none;
+}
